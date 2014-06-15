@@ -1,4 +1,4 @@
-module wiggle (gpio);
+module mimas (gpio);
 
 output [31:0] gpio;
 
