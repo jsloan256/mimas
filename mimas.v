@@ -4,6 +4,6 @@ output [31:0] gpio;
 
 wire [31:0] gpio;
 
-assign gpio = 8'hAAAAAAAA;
+assign gpio = 32'h55555555;
 
 endmodule
