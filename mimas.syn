@@ -1,0 +1,8 @@
+JDF B
+// Created by Version 1.7 
+PROJECT mimas
+DESIGN mimas Normal
+DEVKIT LC4064ZE-7TN48C
+ENTRY Pure Verilog HDL
+SYNTHESIS_TOOL Synplify
+SIMULATOR_TOOL ActiveHDL
