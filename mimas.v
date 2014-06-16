@@ -3,22 +3,40 @@ module mimas (gpio);
 output [31:0] gpio;
 
 wire [31:0] gpio;
-wire osc_dis, tmr_rst, osc_out, tmr_out;
-
+reg [31:0] sreg;
+wire osc_dis, tmr_rst, clk, tmr_clk;
+reg rstn;
 
 defparam I1.TIMER_DIV = "1048576";
-osctimer I1 (.DYNOSCDIS(osc_dis), .TIMERRES(tmr_rst), .OSCOUT(osc_out), .TIMEROUT(tmr_out));
+osctimer I1 (.DYNOSCDIS(osc_dis), .TIMERRES(tmr_rst), .OSCOUT(clk), .TIMEROUT(tmr_clk));
 
 assign osc_dis = 0;
 assign tmr_rst = 0;
-assign gpio = 32'h55555555;
+
+always @ (posedge tmr_clk or negedge rstn) 
+begin
+	if (rstn == 0) begin
+		sreg <= 32'hFFFF_FFFE;
+	end else begin
+		sreg <= sreg << 1;
+		sreg[0] <= sreg[31];
+	end
+end
+
+assign gpio = sreg;
+
+always @ (posedge tmr_clk)
+begin
+	rstn <= 1;
+end
 
 endmodule
 
+// ======================= //
 
 module osctimer(DYNOSCDIS, TIMERRES, OSCOUT, TIMEROUT);
 
-parameter TIMER_DIV = "128";
+parameter TIMER_DIV = "1048576";
 
 input DYNOSCDIS;
 input TIMERRES;

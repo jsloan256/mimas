@@ -6,6 +6,7 @@ DEVKIT LC4064ZE-7TN48C
 ENTRY Pure Verilog HDL
 MODULE mimas.v
 MODSTYLE mimas Normal
+MODSTYLE osctimer Normal
 SYNTHESIS_TOOL Synplify
 SIMULATOR_TOOL ActiveHDL
 TOPMODULE mimas

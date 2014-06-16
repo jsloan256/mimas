@@ -18,9 +18,9 @@
 				<BScanLen>1</BScanLen>
 				<BScanVal>0</BScanVal>
 			</Bypass>
-			<File>S:\mimas2\mimas.jed</File>
-			<FileTime>06/15/14 15:31:30</FileTime>
-			<JedecChecksum>0x7ACE</JedecChecksum>
+			<File>S:\mimas\trunk\mimas.jed</File>
+			<FileTime>06/16/14 12:41:55</FileTime>
+			<JedecChecksum>0x6FC5</JedecChecksum>
 			<Operation>Erase,Program,Verify</Operation>
 			<Option>
 				<SVFVendor>JTAG STANDARD</SVFVendor>

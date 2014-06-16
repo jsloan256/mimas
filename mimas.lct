@@ -7,11 +7,13 @@ PartType = LC4064ZE;
 Speed = -7.5;
 Operating_condition = COM;
 Status = Production;
+EN_PinGLB = yes;
+EN_PinMacrocell = yes;
 
 [Revision]
 Parent = lc4k64e.lci;
-DATE = 2002;
-TIME = 0:00:00;
+DATE = 06/16/2014;
+TIME = 10:55:04;
 Source_Format = Pure_Verilog_HDL;
 Synthesis = Synplify;
 
@@ -25,6 +27,38 @@ Synthesis = Synplify;
 
 [Location Assignments]
 layer = OFF;
+gpio_0_ = Pin, 32, -, D, 12;
+gpio_1_ = Pin, 38, -, D, 6;
+gpio_2_ = Pin, 39, -, D, 4;
+gpio_3_ = Pin, 44, -, A, 0;
+gpio_4_ = Pin, 45, -, A, 1;
+gpio_5_ = Pin, 48, -, A, 6;
+gpio_6_ = Pin, 2, -, A, 8;
+gpio_7_ = Pin, 7, -, B, 15;
+gpio_8_ = Pin, 8, -, B, 12;
+gpio_9_ = Pin, 14, -, B, 6;
+gpio_10_ = Pin, 15, -, B, 4;
+gpio_11_ = Pin, 20, -, C, 0;
+gpio_12_ = Pin, 21, -, C, 1;
+gpio_13_ = Pin, 24, -, C, 6;
+gpio_14_ = Pin, 26, -, C, 8;
+gpio_15_ = Pin, 31, -, D, 15;
+gpio_16_ = Pin, 33, -, D, 10;
+gpio_17_ = Pin, 34, -, D, 8;
+gpio_18_ = Pin, 40, -, D, 2;
+gpio_19_ = Pin, 41, -, D, 0;
+gpio_20_ = Pin, 46, -, A, 2;
+gpio_21_ = Pin, 47, -, A, 4;
+gpio_22_ = Pin, 3, -, A, 10;
+gpio_23_ = Pin, 4, -, A, 11;
+gpio_24_ = Pin, 9, -, B, 10;
+gpio_25_ = Pin, 10, -, B, 8;
+gpio_26_ = Pin, 16, -, B, 2;
+gpio_27_ = Pin, 17, -, B, 0;
+gpio_28_ = Pin, 22, -, C, 2;
+gpio_29_ = Pin, 23, -, C, 4;
+gpio_30_ = Pin, 27, -, C, 10;
+gpio_31_ = Pin, 28, -, C, 11;
 
 [Group Assignments]
 layer = OFF;
@@ -48,6 +82,38 @@ layer = OFF;
 
 [IO Types]
 layer = OFF;
+gpio_0_ = LVCMOS33, PIN, 1, -;
+gpio_1_ = LVCMOS33, PIN, 1, -;
+gpio_2_ = LVCMOS33, PIN, 1, -;
+gpio_3_ = LVCMOS33, PIN, 0, -;
+gpio_4_ = LVCMOS33, PIN, 0, -;
+gpio_5_ = LVCMOS33, PIN, 0, -;
+gpio_6_ = LVCMOS33, PIN, 0, -;
+gpio_7_ = LVCMOS33, PIN, 0, -;
+gpio_8_ = LVCMOS33, PIN, 0, -;
+gpio_9_ = LVCMOS33, PIN, 0, -;
+gpio_10_ = LVCMOS33, PIN, 0, -;
+gpio_11_ = LVCMOS33, PIN, 1, -;
+gpio_12_ = LVCMOS33, PIN, 1, -;
+gpio_13_ = LVCMOS33, PIN, 1, -;
+gpio_14_ = LVCMOS33, PIN, 1, -;
+gpio_15_ = LVCMOS33, PIN, 1, -;
+gpio_16_ = LVCMOS33, PIN, 1, -;
+gpio_17_ = LVCMOS33, PIN, 1, -;
+gpio_18_ = LVCMOS33, PIN, 1, -;
+gpio_19_ = LVCMOS33, PIN, 1, -;
+gpio_20_ = LVCMOS33, PIN, 0, -;
+gpio_21_ = LVCMOS33, PIN, 0, -;
+gpio_22_ = LVCMOS33, PIN, 0, -;
+gpio_23_ = LVCMOS33, PIN, 0, -;
+gpio_24_ = LVCMOS33, PIN, 0, -;
+gpio_25_ = LVCMOS33, PIN, 0, -;
+gpio_26_ = LVCMOS33, PIN, 0, -;
+gpio_27_ = LVCMOS33, PIN, 0, -;
+gpio_28_ = LVCMOS33, PIN, 1, -;
+gpio_29_ = LVCMOS33, PIN, 1, -;
+gpio_30_ = LVCMOS33, PIN, 1, -;
+gpio_31_ = LVCMOS33, PIN, 1, -;
 
 [Pullup]
 
@@ -56,6 +122,7 @@ layer = OFF;
 [Region]
 
 [Timing Constraints]
+layer = OFF;
 
 [HSI Attributes]
 
@@ -110,3 +177,22 @@ layer = OFF;
 [ORP Bypass]
 
 [Register Powerup]
+
+[OSCTIMER Assignments]
+layer = OFF;
+OSCTIMER = -, -, -, tmr_clk, 1048576;
+
+[Constraint Version]
+version = 1.0;
+
+[ORP ASSIGNMENTS]
+layer = OFF;
+
+[Node attribute]
+layer = OFF;
+
+[SYMBOL/MODULE attribute]
+layer = OFF;
+
+[Nodal Constraints]
+layer = OFF;
